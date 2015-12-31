@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+        <title>Rental Car</title>
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="home_styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <script type="text/javascript">
+            var curBanner="cycle1";
+            var begin;
+            function callOnLoad(){
+                begin=setInterval('changeBanner()',2000);
+            }
+            function changeBanner() {
+                if (curBanner == "cycle2") {
+                    document.images[1].src = "Images/Car1.jpg";
+                    curBanner = "cycle1";
+                }else {
+                    document.images[1].src = "Images/Car2.jpg";
+                    curBanner = "cycle2";
+                }
+            }
+
+        </script>
+    </head>
+    <body onload="callOnLoad();">
+     <div class="container"> 
+         <div class="header">
+         <img src="Images/carlogo.jpe" alt="Logo" title="ezilogo" />
+         <h1>Ezi Car.com</h1>
+         </div>
+         
+         <div class="nav">   
+        <ul>
+            <li><a href="Home_Page.html"></a><span>Home</span></li>
+                <li>&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+        	<li><a href="Order_Page.html">Order</a></li>      
+        </ul>
+         </div>         
+         <div class="main"> 
+             <img src="Images/Car2.jpg" alt="Car" width="960" height="400"/>
+             <center><h1 style="font-style: italic;padding-top:20px">Welcome to Ezi Car Rental</h1></center>
+             <center><h2  >Save <em>more</em> money!!</h2></center>
+         </div>
+         
+         <div class="footer">
+             <p style="font-style: italic"><b>Car Rental</b></p>
+                     <p>215-555-555<br>
+                        1700 Chestnut Street,<br>
+                        California,CA 1234<br>
+                        support@ezirent.com</p>
+         </div>
+     </div>
+    </body>
+

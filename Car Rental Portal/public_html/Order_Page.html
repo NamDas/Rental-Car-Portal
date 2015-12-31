@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Car Rental Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="order_styles.css"/>
+         <script type="text/javascript" src="order.js"></script> 
+           
+    </head>
+    <body>
+        <div class="container">
+            
+            <form name="orderform" action="#" class="registration_form"> 
+         <div class="err" id="errorBox"></div>
+         <h2 style="text-align: center;font-style: italic"><u>SEARCH YOUR CAR RENTAL</u></h2>
+         <table>        
+         <colgroup span = "10" width = "100" /> 
+         <tr>
+         <th><img src="Images/Order_car1.jpe" style="margin:25px" width="208" height="187" alt="compact" />Compact</th>
+         <th><img src="Images/Order_car2.jpe" style="margin:25px" width="208" height="187" alt="mid_size" />Mid Size</th>
+         <th><img src="Images/Order_car3.jpg" style="margin:25px" width="208" height="187" alt="luxury" />Luxury</th></tr>
+         </table>
+         
+         <div class="elements"> 
+         <label for="cartype"><b>Car Type :</b></label>
+         <select name="types" onchange="CarType(this)">
+         <option selected="selected" value="">Show All Car Types</option>
+         <option value="Compact">Compact</option>
+         <option value="MidSize">Mid Size</option>
+         <option value="Luxury">Luxury</option>
+        </select>
+        </div>
+         
+         <div class="elements">
+        <label for="loc"><b>Location :</b></label>
+         <select name="locations">
+         <option selected="selected" value="">Show All Locations</option>
+         <option value="SanFrancisco">San Francisco</option>
+         <option value="Los Angeles">Los Angeles</option>
+         <option value="Luxury">Luxury</option>
+        </select>
+        </div>
+        <div class="elements">
+        <label for="pckdte"><b>Pick up Date:</b></label>
+        <input name="arrivalDate" type="date" value="" id="pck"/><br/>
+        <label for="drpdte"><b>Drop off Date: </b></label>
+        <input name="departureDate" type="date" value="" id="drp"/>
+        </div>
+         
+        <div class="elements">
+        <label for="NoDays"><b>Days:</b></label>
+        <input type="text" name="inputdays" id="textbox" size="25" onfocus="input()"  />
+        </div>
+         
+         <div class="optional">
+        <label for="OptionalServices"><b>Optional Services:</b></label><br>
+        <input type="checkbox" name="collision" value="" size="25">Collision Insurance<br>
+        <input type="checkbox" name="giftcards" value="100" size="25">Pre-paid Gift Cards<br>       
+        </div>
+         <div id="days_target" style="display:none;">
+             <input type="checkbox" name="carwash" value="50"/>Car Wash:50$<br>
+         </div>
+             
+        
+        <div id="buttons" >
+            <label>&nbsp;</label>
+            <input type="button" value="Submit" onclick="showHide('hidethis');"/><br />
+        
+        </div>
+  
+         <div id="hidethis" style="display:none;">
+            <fieldset><legend>Details:</legend>
+                <center><p>Thank You For Choosing Ezi-Car Rental!</p></center>
+                <em><b>Car Type:</b></em> <span id="type"></span><br/>
+                <em><b>Location:</b></em> <span id="location"></span><br/>
+                <em><b>Total Days: </b></em> <span id="days"></span><br/>
+                <em><b>Total Cost:</b></em> <span id="price"></span>
+            </fieldset>
+        </div>  
+        
+</form>   
+        </div>
+    </body>
+</html>

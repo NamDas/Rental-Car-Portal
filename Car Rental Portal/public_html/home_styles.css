@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 1, 2014, 9:30:37 AM
+    Author     : Namrata
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+  
+}
+body {
+	background: url(Images/background.jpg) repeat-x;
+	height:900px;
+}
+.container{
+  width: 960px;
+  height: 900px;
+  margin-left: auto;
+  margin-right: auto; 
+  border-radius: 2px;
+  box-shadow: 0 0 15px 0px rgba(12,3,25,0.8);
+ 
+}
+.header{
+    background-color: #878E63;;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+}
+.header img{
+    float:left;
+    height:160px;
+    padding: 5px;
+    margin-right: 150px;
+}
+.header h1{
+    color: wheat;
+    line-height: 168px;
+     font-style: oblique;
+}
+
+.nav{
+   
+    width:100%;
+    background-color: #9bb584;
+    height: 35px;
+  
+}
+.nav ul{
+   padding-top: 10px;
+   padding-right:20px;
+   float:right; 
+}
+.nav ul li{
+  
+    list-style: none;
+    display: inline-block;
+    
+    
+}
+.main{
+    background-color: #9bb584;
+    height:500px;
+}
+.main img{
+    float:right;
+}
+.main h1{
+    padding-top: 20px;
+}
+.main h2{
+    padding-top: 10px;
+}
+
+.footer{
+    background-color:#878E63;
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #000000;
+    height:180px;
+}
+.footer p{
+    padding-top: 20px;
+    text-align: center;
+}
